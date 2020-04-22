@@ -65,6 +65,6 @@ class SitemapController extends Controller
                 'time' => (new Carbon())->tz('UTC')->toAtomString(),
                 'links' => $links
             ]
-        )->header('Content-Type', 'text/xml');
+        )->header('Content-Type', 'text/xml; charset=UTF-8');
     }
 }
