@@ -60,11 +60,11 @@ class SitemapController extends Controller
             }
         }
 
-        return response()->view('sitemap.item',
+        return response()->view('sitemap.text',
             [
                 'time' => (new Carbon())->tz('UTC')->toAtomString(),
                 'links' => $links
             ]
-        )->header('Content-Type', 'text/xml; charset=UTF-8');
+        )->header('Content-Type', 'text/html; charset=utf-8');
     }
 }
