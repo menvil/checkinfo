@@ -77,3 +77,11 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Когда как обычно что-то сломалось в линуксе не понятно почему
+yum install policycoreutils-python -y # might not be necessary, try the below first
+
+semanage fcontext -a -t httpd_sys_rw_content_t "/var/www/html/laravel/storage(/.*)?" # add a new httpd read write content to sellinux for the specific folder, -m for modify
+semanage fcontext -a -t httpd_sys_rw_content_t "/var/www/html/laravel/bootstrap/cache(/.*)?" # same as the above for b/cache
+
+restorecon -Rv /var/www/html/ # this command is very important to, it's like a restart to apply the new rules

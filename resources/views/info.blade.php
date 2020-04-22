@@ -296,6 +296,7 @@
 <script src="../assets/lib/@fortawesome/all.min.js"></script>
 -->
 <!-- Global site tag (gtag.js) - Google Analytics-->
+<!--
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-122907869-1"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
@@ -306,6 +307,7 @@
     gtag('js', new Date());
     gtag('config', 'UA-122907869-1');
 </script>
+-->
 <!--
 <script src="../assets/js/theme.js"></script>
 -->
