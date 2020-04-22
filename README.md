@@ -79,6 +79,7 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 ## Когда как обычно что-то сломалось в линуксе не понятно почему
+https://stackoverflow.com/questions/23411520/how-to-fix-error-laravel-log-could-not-be-opened
 yum install policycoreutils-python -y # might not be necessary, try the below first
 
 semanage fcontext -a -t httpd_sys_rw_content_t "/var/www/html/laravel/storage(/.*)?" # add a new httpd read write content to sellinux for the specific folder, -m for modify
