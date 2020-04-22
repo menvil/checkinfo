@@ -21,7 +21,7 @@ class SitemapController extends Controller
     public function page($page)
     {
 
-        $startA = 11;
+        $startA = 1;
         $startB = 0;
         $startC = 0;
         $count = 0;
