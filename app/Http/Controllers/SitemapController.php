@@ -78,6 +78,6 @@ class SitemapController extends Controller
                 'time' => (new Carbon())->tz('UTC')->toAtomString(),
                 'links' => $this->getData($page)
             ]
-        )->header('Content-Type', 'plain/text; charset=UTF-8');
+        )->header('Content-Type', 'text/html; charset=UTF-8');
     }
 }
