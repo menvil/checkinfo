@@ -7,7 +7,7 @@ use Carbon\Carbon;
 
 class SitemapController extends Controller
 {
-    private $parts = 4;
+    private $parts = 16;
 
     public function index()
     {
