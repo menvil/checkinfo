@@ -19,7 +19,7 @@ class SitemapController extends Controller
     }
 
     private function getData ($page) {
-        $startA = 1;
+        $startA = array_first(explode('.', request()->getHost()));;
         $startB = 0;
         $startC = 0;
         $count = 0;
