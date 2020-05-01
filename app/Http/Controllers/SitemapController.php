@@ -15,7 +15,7 @@ class SitemapController extends Controller
             [
                 'pages' => (256*256)/((256*256)/$this->parts)
             ]
-        )->header('Content-Type', 'text/xml; charset=UTF-8');
+        )->header('Content-Type', 'application/xml');
     }
 
     private function getData ($page) {
