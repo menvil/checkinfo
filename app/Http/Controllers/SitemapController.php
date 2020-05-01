@@ -18,9 +18,7 @@ class SitemapController extends Controller
         )->header('Content-Type', 'text/xml; charset=UTF-8');
     }
 
-    public function page($page)
-    {
-
+    private function getData ($page) {
         $startA = 1;
         $startB = 0;
         $startC = 0;
@@ -60,11 +58,26 @@ class SitemapController extends Controller
             }
         }
 
+        return $links;
+
+    }
+    public function xml($page)
+    {
+        return response()->view('sitemap.item',
+            [
+                'time' => (new Carbon())->tz('UTC')->toAtomString(),
+                'links' => $this->getData($page)
+            ]
+        )->header('Content-Type', 'application/xml');
+    }
+
+    public function txt($page)
+    {
         return response()->view('sitemap.text',
             [
                 'time' => (new Carbon())->tz('UTC')->toAtomString(),
-                'links' => $links
+                'links' => $this->getData($page)
             ]
-        )->header('Content-Type', 'text/html; charset=utf-8');
+        )->header('Content-Type', 'plain/text; charset=UTF-8');
     }
 }
