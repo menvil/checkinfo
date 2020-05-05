@@ -14,9 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('test', 'TestController@lookup');
 Route::get('/sitemap.xml', 'SitemapController@index');
-Route::get('/sitemap/sitemap{page}.txt', 'SitemapController@txt')->where('page', '[0-9]+');
+//Route::get('/sitemap/sitemap{page}.txt', 'SitemapController@txt')->where('page', '[0-9]+');
 Route::get('/sitemap{page}.txt', 'SitemapController@txt')->where('page', '[0-9]+');
-Route::get('/sitemap/sitemap{page}.xml', 'SitemapController@xml')->where('page', '[0-9]+');
+//Route::get('/sitemap/sitemap{page}.xml', 'SitemapController@xml')->where('page', '[0-9]+');
 Route::get('/sitemap{page}.xml', 'SitemapController@xml')->where('page', '[0-9]+');
 
 Route::get('/{range}', 'IpController@short')->where('range', '^((25[0-5]|(2[0-4]|1[0-9]|[1-9]|)[0-9])(\.(?!$)|$)){3}$');
